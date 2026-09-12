@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Razorpay digital payments platform frontend demo."
+  />
+
+  <title>Razorpay | Payment Gateway</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <a
+        class="logo"
+        href="#top"
+        aria-label="Razorpay home"
+      >
+        Razor<span>pay</span>
+        <small>Digital Payments Platform</small>
+      </a>
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Primary navigation"
+      >
+        <a href="#payments">Payments</a>
+        <a href="#banking">Banking</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button
+          class="theme-btn"
+          id="themeToggle"
+          type="button"
+          aria-label="Switch to light mode"
+          title="Toggle theme"
+        >
+          &#127769;
+        </button>
+
+        <button
+          class="login-btn"
+          type="button"
+          data-modal="loginModal"
+        >
+          Login
+        </button>
+
+        <button
+          class="signup-btn"
+          type="button"
+          data-modal="signupModal"
+        >
+          Sign Up
+        </button>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== MAIN ==================== -->
+  <main id="top">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero reveal">
+
+      <div class="hero-content">
+
+        <p class="tag">
+          India's Digital Payment Solution
+        </p>
+
+        <h1>
+          Power your business with smart digital payments
+        </h1>
+
+        <p class="hero-text">
+          Accept online payments, automate payouts, manage subscriptions
+          and grow your business with a modern financial platform.
+        </p>
+
+        <div class="hero-buttons">
+
+          <button
+            class="primary-btn"
+            type="button"
+            data-modal="signupModal"
+          >
+            Sign Up Now
+          </button>
+
+          <a
+            class="secondary-btn"
+            href="#payments"
+          >
+            Know More
+            <span aria-hidden="true">&#8594;</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="payment-card">
+
+          <div
+            class="card-header"
+            aria-hidden="true"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <h3>Payment Dashboard</h3>
+
+          <div class="amount">
+            &#8377; 1,25,430
+          </div>
+
+          <p>
+            Total payments received
+          </p>
+
+          <div
+            class="chart"
+            aria-label="Payments trend chart"
+            role="img"
+          >
+            <div style="height:45%"></div>
+            <div style="height:72%"></div>
+            <div style="height:58%"></div>
+            <div style="height:88%"></div>
+            <div style="height:66%"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TRUSTED ==================== -->
+    <section
+      class="trusted reveal"
+      aria-label="Trusted by"
+    >
+
+      <p>
+        Trusted by startups, developers and growing businesses
+      </p>
+
+      <div class="brand-row">
+        <span>Startup</span>
+        <span>Store</span>
+        <span>EduTech</span>
+        <span>FinTech</span>
+        <span>Creator</span>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PAYMENT SUITE ==================== -->
+    <section
+      class="payment-suite"
+      id="payments"
+    >
+
+      <div class="section-heading reveal">
+
+        <h2>
+          Accept payments with Razorpay
+        </h2>
+
+        <p>
+          Multiple payment modes in one simple integration.
+        </p>
+
+      </div>
+
+
+      <div class="suite-card reveal">
+
+        <div>
+
+          <h3>Payment Gateway</h3>
+
+          <p>
+            Accept credit cards, debit cards, UPI, netbanking, wallets
+            and EMI payments with a clean checkout experience.
+          </p>
+
+          <ul>
+            <li>100+ payment modes</li>
+            <li>Instant activation</li>
+            <li>Easy integration</li>
+            <li>Secure transactions</li>
+          </ul>
+
+          <button
+            class="primary-btn"
+            type="button"
+            data-modal="signupModal"
+          >
+            Get Started
+          </button>
+
+        </div>
+
+
+        <div class="checkout-box">
+
+          <h4>Secure Checkout</h4>
+
+          <input
+            type="text"
+            value="Manisha Bhardwaj"
+            readonly
+            aria-label="Customer name"
+          />
+
+          <input
+            type="text"
+            value="&#8377; 2,499"
+            readonly
+            aria-label="Payment amount"
+          />
+
+          <button
+            type="button"
+            id="paySecurely"
+          >
+            Pay Securely
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PAYMENT LINKS ==================== -->
+    <section
+      class="link-section reveal"
+      id="payment-links"
+    >
+
+      <div class="section-heading">
+
+        <h2>Create Payment Links</h2>
+
+        <p>
+          Generate and share payment links with your customers in seconds.
+        </p>
+
+      </div>
+
+
+      <form
+        class="link-form"
+        id="linkForm"
+        novalidate
+      >
+
+        <label>
+          Customer Name
+          <input
+            id="linkCustomer"
+            type="text"
+            required
+            autocomplete="name"
+          />
+        </label>
+
+        <label>
+          Customer Email
+          <input
+            id="linkEmail"
+            type="email"
+            required
+            autocomplete="email"
+          />
+        </label>
+
+        <label>
+          Amount
+          <input
+            id="linkAmount"
+            type="number"
+            min="1"
+            step="0.01"
+            required
+          />
+        </label>
+
+        <label>
+          Description
+          <input
+            id="linkDescription"
+            type="text"
+            placeholder="Monthly subscription"
+          />
+        </label>
+
+        <label>
+          Expiry Date
+          <input
+            id="linkExpiry"
+            type="date"
+            required
+          />
+        </label>
+
+        <button
+          class="primary-btn"
+          type="submit"
+        >
+          Generate Link
+        </button>
+
+      </form>
+
+
+      <div
+        class="link-result"
+        id="linkResult"
+        hidden
+      >
+        <span id="generatedLink"></span>
+
+        <button
+          type="button"
+          id="copyLink"
+        >
+          Copy Link
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- ==================== FEATURES ==================== -->
+    <section
+      class="features"
+      id="features"
+    >
+
+      <div class="section-heading reveal">
+
+        <h2>Explore our products</h2>
+
+        <p>
+          Everything you need to manage online payments and business finance.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#128179;</div>
+
+          <h3>Payment Links</h3>
+
+          <p>
+            Create and share payment links instantly with customers.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#129534;</div>
+
+          <h3>Invoices</h3>
+
+          <p>
+            Generate professional invoices and collect payments faster.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#128260;</div>
+
+          <h3>Subscriptions</h3>
+
+          <p>
+            Automate recurring payments for monthly plans and services.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#127974;</div>
+
+          <h3>Smart Banking</h3>
+
+          <p>
+            Manage business banking, payouts and settlements in one place.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#128202;</div>
+
+          <h3>Analytics</h3>
+
+          <p>
+            Track transactions, revenue, refunds and payment success rate.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card reveal">
+
+          <div class="icon">&#128274;</div>
+
+          <h3>Security</h3>
+
+          <p>
+            Secure payment experience with fraud checks and encryption.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== DASHBOARD ==================== -->
+    <section
+      class="dashboard-section reveal"
+      id="dashboard"
+    >
+
+      <div class="section-heading">
+
+        <h2>Payment Dashboard</h2>
+
+        <p>
+          A quick view of your simulated payment activity.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+          <div class="stat-grid">
+
+            <div>
+              <span>Total Payments</span>
+              <strong>&#8377; 1,25,430</strong>
+            </div>
+
+            <div>
+              <span>Successful</span>
+              <strong>1,186</strong>
+            </div>
+
+            <div>
+              <span>Pending</span>
+              <strong>24</strong>
+            </div>
+
+            <div>
+              <span>Refunds</span>
+              <strong>&#8377; 8,240</strong>
+            </div>
+
+          </div>
+
+
+          <div class="dashboard-chart">
+
+            <span style="height:42%"></span>
+            <span style="height:65%"></span>
+            <span style="height:50%"></span>
+            <span style="height:82%"></span>
+            <span style="height:70%"></span>
+            <span style="height:92%"></span>
+            <span style="height:78%"></span>
+
+          </div>
+
+        </div>
+
+
+        <div class="transaction-card">
+
+          <div class="card-title">
+
+            <h3>Recent Transactions</h3>
+
+            <button
+              class="text-btn"
+              id="viewTransactions"
+              type="button"
+            >
+              View Transactions
+            </button>
+
+          </div>
+
+
+          <ul class="transaction-list">
+
+            <li>
+              <span>
+                Amazon Store
+                <small>Today, 10:42 AM</small>
+              </span>
+              <strong>+&#8377;2,499</strong>
+            </li>
+
+            <li>
+              <span>
+                College Fees
+                <small>Yesterday, 4:18 PM</small>
+              </span>
+              <strong>+&#8377;5,000</strong>
+            </li>
+
+            <li>
+              <span>
+                Web Services
+                <small>Yesterday, 11:06 AM</small>
+              </span>
+              <strong>+&#8377;8,500</strong>
+            </li>
+
+            <li>
+              <span>
+                Subscription
+                <small>12 Sep, 8:30 AM</small>
+              </span>
+              <strong>+&#8377;999</strong>
+            </li>
+
+          </ul>
+
+
+          <button
+            class="report-btn"
+            id="downloadReport"
+            type="button"
+          >
+            Download Report
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== MANAGEMENT ==================== -->
+    <section
+      class="management-section reveal"
+      id="management"
+    >
+
+      <div class="dashboard-toolbar">
+
+        <div>
+
+          <p class="tag">Workspace</p>
+
+          <h2>Payment operations</h2>
+
+        </div>
+
+
+        <div class="global-search">
+
+          <label for="globalSearch">
+            Search workspace
+          </label>
+
+          <input
+            id="globalSearch"
+            type="search"
+            placeholder="Search transactions, links or invoices"
+            autocomplete="off"
+          />
+
+          <div
+            id="globalResults"
+            class="global-results"
+            hidden
+          ></div>
+
+        </div>
+
+
+        <button
+          class="notification-button"
+          id="notificationButton"
+          type="button"
+          aria-label="Open notifications"
+          aria-expanded="false"
+        >
+          &#128276;
+
+          <span
+            id="notificationCount"
+            class="notification-count"
+          >
+            0
+          </span>
+        </button>
+
+
+        <div
+          id="notificationPanel"
+          class="notification-panel"
+          hidden
+        >
+
+          <div class="panel-heading">
+
+            <strong>Notifications</strong>
+
+            <button
+              id="markAllRead"
+              class="text-btn"
+              type="button"
+            >
+              Mark all read
+            </button>
+
+          </div>
+
+          <div id="notificationList"></div>
+
+          <button
+            id="clearNotifications"
+            class="panel-footer"
+            type="button"
+          >
+            Clear notifications
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK ACTIONS -->
+      <div class="quick-actions">
+
+        <button
+          type="button"
+          data-quick-action="link"
+        >
+          Create Payment Link
+        </button>
+
+        <button
+          type="button"
+          data-quick-action="transactions"
+        >
+          View Transactions
+        </button>
+
+        <button
+          type="button"
+          data-quick-action="invoice"
+        >
+          Generate Invoice
+        </button>
+
+        <button
+          type="button"
+          data-quick-action="analytics"
+        >
+          View Analytics
+        </button>
+
+        <button
+          type="button"
+          data-quick-action="customers"
+        >
+          Manage Customers
+        </button>
+
+      </div>
+
+
+      <!-- ANALYTICS CARDS -->
+      <div
+        class="analytics-grid"
+        id="analytics"
+      >
+
+        <article class="analytics-card">
+          <span>Total Revenue</span>
+          <strong id="metricRevenue">&#8377;0</strong>
+          <small>Successful payments</small>
+        </article>
+
+        <article class="analytics-card">
+          <span>Successful Payments</span>
+          <strong id="metricSuccessful">0</strong>
+          <small>Completed transactions</small>
+        </article>
+
+        <article class="analytics-card">
+          <span>Pending Payments</span>
+          <strong id="metricPending">0</strong>
+          <small>Awaiting confirmation</small>
+        </article>
+
+        <article class="analytics-card">
+          <span>Failed Payments</span>
+          <strong id="metricFailed">0</strong>
+          <small>Needs attention</small>
+        </article>
+
+        <article class="analytics-card">
+          <span>Refunded Amount</span>
+          <strong id="metricRefunded">&#8377;0</strong>
+          <small>Returned to customers</small>
+        </article>
+
+        <article class="analytics-card">
+          <span>Total Transactions</span>
+          <strong id="metricTotal">0</strong>
+          <small>Across all payment methods</small>
+        </article>
+
+      </div>
+
+
+      <!-- REVENUE ANALYTICS -->
+      <div class="analytics-panel">
+
+        <div class="panel-heading">
+
+          <div>
+
+            <h3>Revenue analytics</h3>
+
+            <p id="analyticsSummary">
+              Last 30 days
+            </p>
+
+          </div>
+
+
+          <div
+            class="range-tabs"
+            role="group"
+            aria-label="Analytics range"
+          >
+
+            <button
+              class="active"
+              type="button"
+              data-range="today"
+            >
+              Today
+            </button>
+
+            <button
+              type="button"
+              data-range="7"
+            >
+              Last 7 Days
+            </button>
+
+            <button
+              type="button"
+              data-range="30"
+            >
+              Last 30 Days
+            </button>
+
+            <button
+              type="button"
+              data-range="year"
+            >
+              This Year
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="analytics-visual">
+
+          <div
+            id="revenueChart"
+            class="revenue-chart"
+            role="img"
+            aria-label="Revenue trend"
+          ></div>
+
+          <div
+            class="distribution"
+            id="methodDistribution"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== TRANSACTIONS ==================== -->
+    <section
+      class="transactions-section reveal"
+      id="transactions"
+    >
+
+      <div class="section-heading">
+
+        <h2>Transactions</h2>
+
+        <p>
+          Search, review and manage simulated payment activity.
+        </p>
+
+      </div>
+
+
+      <div class="filter-bar">
+
+        <input
+          id="transactionSearch"
+          type="search"
+          placeholder="Search ID, customer or email"
+          aria-label="Search transactions"
+        />
+
+        <select
+          id="statusFilter"
+          aria-label="Filter by status"
+        >
+          <option value="all">All statuses</option>
+          <option>Success</option>
+          <option>Pending</option>
+          <option>Failed</option>
+          <option>Refunded</option>
+        </select>
+
+        <select
+          id="methodFilter"
+          aria-label="Filter by payment method"
+        >
+          <option value="all">All methods</option>
+          <option>UPI</option>
+          <option>Credit Card</option>
+          <option>Debit Card</option>
+          <option>Net Banking</option>
+          <option>Wallet</option>
+        </select>
+
+        <select
+          id="transactionSort"
+          aria-label="Sort transactions"
+        >
+          <option value="date">Newest first</option>
+          <option value="amount-desc">Amount high to low</option>
+          <option value="amount-asc">Amount low to high</option>
+          <option value="date-asc">Oldest first</option>
+        </select>
+
+        <button
+          id="clearTransactionFilters"
+          class="secondary-action"
+          type="button"
+        >
+          Clear
+        </button>
+
+        <button
+          id="exportTransactions"
+          class="primary-btn"
+          type="button"
+        >
+          Export CSV
+        </button>
+
+      </div>
+
+
+      <div class="table-wrap">
+
+        <table class="data-table">
+
+          <thead>
+            <tr>
+              <th>Transaction</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Method</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="transactionTableBody"></tbody>
+
+        </table>
+
+
+        <div
+          id="transactionEmpty"
+          class="empty-state"
+          hidden
+        >
+          No matching transactions found.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PAYMENT LINK MANAGEMENT ==================== -->
+    <section
+      class="links-management reveal"
+      id="links-management"
+    >
+
+      <div class="section-heading">
+
+        <h2>Payment Links</h2>
+
+        <p>
+          Manage your simulated payment links in one place.
+        </p>
+
+      </div>
+
+
+      <div class="management-toolbar">
+
+        <button
+          class="primary-btn"
+          type="button"
+          data-quick-action="link"
+        >
+          + Create Payment Link
+        </button>
+
+        <input
+          id="paymentLinkSearch"
+          type="search"
+          placeholder="Search payment links"
+          aria-label="Search payment links"
+        />
+
+        <select
+          id="paymentLinkStatus"
+          aria-label="Filter payment link status"
+        >
+          <option value="all">All statuses</option>
+          <option>Active</option>
+          <option>Expired</option>
+          <option>Used</option>
+        </select>
+
+      </div>
+
+
+      <div
+        id="paymentLinkList"
+        class="management-list"
+      ></div>
+
+    </section>
+
+
+    <!-- ==================== CUSTOMERS ==================== -->
+    <section
+      class="customers-section reveal"
+      id="customers"
+    >
+
+      <div class="section-heading">
+
+        <h2>Customers</h2>
+
+        <p>
+          Customer summaries generated from your demo transactions.
+        </p>
+
+      </div>
+
+
+      <div class="management-toolbar">
+
+        <input
+          id="customerSearch"
+          type="search"
+          placeholder="Search customers"
+          aria-label="Search customers"
+        />
+
+      </div>
+
+
+      <div
+        id="customerList"
+        class="customer-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- ==================== SETTINGS ==================== -->
+    <section
+      class="settings-section reveal"
+      id="settings"
+    >
+
+      <div class="section-heading">
+
+        <h2>Settings</h2>
+
+        <p>
+          Manage local demo preferences. These controls do not provide
+          real account security.
+        </p>
+
+      </div>
+
+
+      <div class="settings-grid">
+
+        <!-- PROFILE -->
+        <form
+          id="profileForm"
+          class="settings-card"
+        >
+
+          <h3>Profile</h3>
+
+          <label>
+            Name
+            <input
+              id="profileName"
+              required
+            />
+          </label>
+
+          <label>
+            Email
+            <input
+              id="profileEmail"
+              type="email"
+              required
+            />
+          </label>
+
+          <label>
+            Phone
+            <input
+              id="profilePhone"
+              type="tel"
+              required
+            />
+          </label>
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+            Save Profile
+          </button>
+
+        </form>
+
+
+        <!-- PREFERENCES -->
+        <div class="settings-card">
+
+          <h3>Preferences</h3>
+
+          <label class="switch-row">
+            Dark / Light theme
+            <input
+              id="settingsTheme"
+              type="checkbox"
+            />
+          </label>
+
+          <label class="switch-row">
+            Email notifications
+            <input
+              id="emailNotifications"
+              type="checkbox"
+            />
+          </label>
+
+          <label class="switch-row">
+            Payment notifications
+            <input
+              id="paymentNotifications"
+              type="checkbox"
+            />
+          </label>
+
+          <label class="switch-row">
+            Two-step verification (demo)
+            <input
+              id="twoStep"
+              type="checkbox"
+            />
+          </label>
+
+        </div>
+
+
+        <!-- CHANGE PASSWORD -->
+        <form
+          id="passwordForm"
+          class="settings-card"
+        >
+
+          <h3>Change Password</h3>
+
+          <label>
+            Current password
+            <input
+              type="password"
+              id="currentPassword"
+              required
+            />
+          </label>
+
+          <label>
+            New password
+            <input
+              type="password"
+              id="newPassword"
+              minlength="6"
+              required
+            />
+          </label>
+
+          <button
+            class="primary-btn"
+            type="submit"
+          >
+            Update Password
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== BANKING ==================== -->
+    <section
+      class="banking"
+      id="banking"
+    >
+
+      <div class="banking-content reveal">
+
+        <p class="tag dark">
+          Business Banking
+        </p>
+
+        <h2>
+          Manage your money with smart banking tools
+        </h2>
+
+        <p>
+          Make vendor payments, automate payouts and track settlements
+          from a single dashboard.
+        </p>
+
+        <button
+          class="primary-btn"
+          type="button"
+          id="exploreBanking"
+        >
+          Explore Banking
+        </button>
+
+      </div>
+
+
+      <div class="banking-card reveal">
+
+        <h3>Business Account</h3>
+
+        <div class="balance">
+          &#8377; 4,80,000
+        </div>
+
+        <div class="transaction">
+          <span>Vendor payout</span>
+          <strong>-&#8377; 25,000</strong>
+        </div>
+
+        <div class="transaction">
+          <span>Settlement received</span>
+          <strong>+&#8377; 86,500</strong>
+        </div>
+
+        <div class="transaction">
+          <span>Invoice paid</span>
+          <strong>+&#8377; 12,999</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== PRICING ==================== -->
+    <section
+      class="pricing"
+      id="pricing"
+    >
+
+      <div class="section-heading reveal">
+
+        <h2>Simple pricing</h2>
+
+        <p>
+          Choose a plan that fits your business.
+        </p>
+
+      </div>
+
+
+      <div class="pricing-grid">
+
+        <!-- STARTER -->
+        <article class="price-card reveal">
+
+          <h3>Starter</h3>
+
+          <h2>Free</h2>
+
+          <p>
+            Best for students and small projects.
+          </p>
+
+          <ul>
+            <li>Payment links</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+
+          <button
+            type="button"
+            data-plan="Starter"
+          >
+            Start Free
+          </button>
+
+        </article>
+
+
+        <!-- BUSINESS -->
+        <article class="price-card active reveal">
+
+          <span class="popular-badge">
+            Most Popular
+          </span>
+
+          <h3>Business</h3>
+
+          <h2>2%</h2>
+
+          <p>
+            Best for growing businesses and online stores.
+          </p>
+
+          <ul>
+            <li>All Starter features</li>
+            <li>Smart dashboard</li>
+            <li>Priority support</li>
+          </ul>
+
+          <button
+            type="button"
+            data-modal="signupModal"
+          >
+            Choose Plan
+          </button>
+
+        </article>
+
+
+        <!-- ENTERPRISE -->
+        <article class="price-card reveal">
+
+          <h3>Enterprise</h3>
+
+          <h2>Custom</h2>
+
+          <p>
+            Advanced features for large organizations.
+          </p>
+
+          <ul>
+            <li>Custom workflows</li>
+            <li>Advanced security</li>
+            <li>Dedicated support</li>
+          </ul>
+
+          <button
+            type="button"
+            data-modal="contactModal"
+          >
+            Contact Sales
+          </button>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== FAQ ==================== -->
+    <section
+      class="faq-section"
+      id="faq"
+    >
+
+      <div class="section-heading reveal">
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+        <p>
+          Clear answers for your payment journey.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            What is Razorpay?
+            <span>+</span>
+          </button>
+
+          <p>
+            Razorpay is an educational frontend project that demonstrates
+            common digital payment platform experiences.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            Which payment methods are supported?
+            <span>+</span>
+          </button>
+
+          <p>
+            The demo includes UPI, cards and net banking flows.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            Is Razorpay secure?
+            <span>+</span>
+          </button>
+
+          <p>
+            This interface demonstrates secure-looking flows, but it
+            does not process real payments.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            Can I create payment links?
+            <span>+</span>
+          </button>
+
+          <p>
+            Yes. Use the payment link generator to create a fake
+            shareable demo URL.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            Does Razorpay support subscriptions?
+            <span>+</span>
+          </button>
+
+          <p>
+            The product showcase includes subscription management
+            as a simulated feature.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item reveal">
+
+          <button
+            type="button"
+            aria-expanded="false"
+          >
+            Is this a real payment gateway?
+            <span>+</span>
+          </button>
+
+          <p>
+            No. Razorpay is an educational frontend project and does
+            not connect to any payment gateway.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================== CTA ==================== -->
+    <section
+      class="cta reveal"
+      id="contact"
+    >
+
+      <h2>
+        Start accepting payments today
+      </h2>
+
+      <p>
+        Create your account and experience a professional digital
+        payment platform.
+      </p>
+
+      <button
+        class="primary-btn"
+        type="button"
+        data-modal="signupModal"
+      >
+        Create Account
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>Razorpay</h3>
+
+        <p>
+          Digital Payments Platform
+        </p>
+
+        <p>
+          Razorpay is an educational frontend project created for
+          internship purposes. It is not a real payment service.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Products</h4>
+
+        <a href="#payments">Payments</a>
+        <a href="#banking">Banking</a>
+        <a href="#features">Features</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Resources</h4>
+
+        <a href="#faq">FAQs</a>
+        <a href="#payment-links">Payment Links</a>
+        <a href="#contact">Contact Sales</a>
+
+      </div>
+
+    </div>
+
+
+    <p class="copyright">
+      &copy; 2026 Razorpay. Created for educational purposes.
+    </p>
+
+  </footer>
+
+
+  <!-- ==================== TOAST ==================== -->
+  <div
+    class="toast-region"
+    id="toastRegion"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <!-- ==================== LOGIN MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="loginModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="loginTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close login"
+      >
+        &times;
+      </button>
+
+      <h2 id="loginTitle">
+        Welcome back
+      </h2>
+
+      <p class="modal-intro">
+        Sign in to your Razorpay demo account.
+      </p>
+
+
+      <form
+        id="loginForm"
+        novalidate
+      >
+
+        <label>
+          Email
+
+          <input
+            id="loginEmail"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Password
+
+          <div class="password-field">
+
+            <input
+              id="loginPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+
+            <button
+              class="password-toggle"
+              type="button"
+              aria-label="Show password"
+            >
+              &#128065;
+            </button>
+
+          </div>
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <div class="form-row">
+
+          <label class="check-label">
+
+            <input
+              id="rememberMe"
+              type="checkbox"
+            />
+
+            Remember me
+
+          </label>
+
+
+          <button
+            class="link-button"
+            id="forgotPassword"
+            type="button"
+          >
+            Forgot Password?
+          </button>
+
+        </div>
+
+
+        <button
+          class="primary-btn modal-submit"
+          type="submit"
+        >
+          Login
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== SIGNUP MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="signupModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="signupTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close sign up"
+      >
+        &times;
+      </button>
+
+      <h2 id="signupTitle">
+        Create your account
+      </h2>
+
+      <p class="modal-intro">
+        Start with a free Razorpay demo account.
+      </p>
+
+
+      <form
+        id="signupForm"
+        novalidate
+      >
+
+        <label>
+          Full Name
+
+          <input
+            id="signupName"
+            type="text"
+            autocomplete="name"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Email
+
+          <input
+            id="signupEmail"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Password
+
+          <input
+            id="signupPassword"
+            type="password"
+            autocomplete="new-password"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Confirm Password
+
+          <input
+            id="signupConfirm"
+            type="password"
+            autocomplete="new-password"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label class="check-label">
+
+          <input
+            id="terms"
+            type="checkbox"
+          />
+
+          I agree to the Terms and Conditions
+
+          <small class="field-error"></small>
+
+        </label>
+
+
+        <button
+          class="primary-btn modal-submit"
+          type="submit"
+        >
+          Create Account
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== PAYMENT MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="paymentModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="paymentTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close payment"
+      >
+        &times;
+      </button>
+
+      <h2 id="paymentTitle">
+        Secure Checkout
+      </h2>
+
+      <p class="modal-intro">
+        Frontend payment simulation only.
+      </p>
+
+
+      <form
+        id="paymentForm"
+        novalidate
+      >
+
+        <div class="payment-summary">
+
+          <span>
+            Customer:
+            <strong>Manisha Bhardwaj</strong>
+          </span>
+
+          <span>
+            Amount:
+            <strong>&#8377;2,499</strong>
+          </span>
+
+        </div>
+
+
+        <fieldset>
+
+          <legend>
+            Payment method
+          </legend>
+
+          <label class="radio-label">
+
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="upi"
+              checked
+            />
+
+            UPI
+
+          </label>
+
+
+          <label class="radio-label">
+
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="card"
+            />
+
+            Card
+
+          </label>
+
+
+          <label class="radio-label">
+
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="netbanking"
+            />
+
+            Net Banking
+
+          </label>
+
+        </fieldset>
+
+
+        <!-- UPI -->
+        <div
+          class="payment-fields"
+          data-method="upi"
+        >
+
+          <label>
+            UPI ID
+
+            <input
+              id="upiId"
+              type="text"
+              placeholder="name@bank"
+            />
+
+            <small class="field-error"></small>
+          </label>
+
+        </div>
+
+
+        <!-- CARD -->
+        <div
+          class="payment-fields"
+          data-method="card"
+          hidden
+        >
+
+          <label>
+            Card Number
+
+            <input
+              id="cardNumber"
+              type="text"
+              inputmode="numeric"
+              placeholder="1234 5678 9012 3456"
+            />
+
+            <small class="field-error"></small>
+          </label>
+
+
+          <div class="split-fields">
+
+            <label>
+              Expiry Date
+
+              <input
+                id="expiry"
+                type="text"
+                placeholder="MM/YY"
+              />
+
+              <small class="field-error"></small>
+            </label>
+
+
+            <label>
+              CVV
+
+              <input
+                id="cvv"
+                type="password"
+                inputmode="numeric"
+                placeholder="123"
+              />
+
+              <small class="field-error"></small>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- NET BANKING -->
+        <div
+          class="payment-fields"
+          data-method="netbanking"
+          hidden
+        >
+
+          <label>
+            Bank
+
+            <select id="bank">
+
+              <option value="">
+                Select your bank
+              </option>
+
+              <option>
+                Demo Bank
+              </option>
+
+              <option>
+                Razorpay Bank
+              </option>
+
+              <option>
+                Example National Bank
+              </option>
+
+            </select>
+
+            <small class="field-error"></small>
+          </label>
+
+        </div>
+
+
+        <button
+          class="primary-btn modal-submit"
+          type="submit"
+        >
+          Pay &#8377;2,499
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== PAYMENT SUCCESS MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="paymentSuccessModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="successTitle"
+    hidden
+  >
+
+    <div class="modal-card success-card">
+
+      <div class="success-mark">
+        &#10003;
+      </div>
+
+      <h2 id="successTitle">
+        Payment Successful
+      </h2>
+
+      <p>
+        Your demo payment has been recorded.
+      </p>
+
+      <p class="transaction-id">
+        Transaction ID:
+        <strong id="transactionId"></strong>
+      </p>
+
+      <button
+        class="primary-btn modal-submit"
+        id="paymentDone"
+        type="button"
+      >
+        Done
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== CONTACT MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="contactModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close contact form"
+      >
+        &times;
+      </button>
+
+      <h2 id="contactTitle">
+        Contact Sales
+      </h2>
+
+      <p class="modal-intro">
+        Tell us how Razorpay can support your team.
+      </p>
+
+
+      <form
+        id="contactForm"
+        novalidate
+      >
+
+        <label>
+          Name
+
+          <input
+            id="contactName"
+            type="text"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Email
+
+          <input
+            id="contactEmail"
+            type="email"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Company
+
+          <input
+            id="contactCompany"
+            type="text"
+            required
+          />
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <label>
+          Message
+
+          <textarea
+            id="contactMessage"
+            rows="4"
+            required
+          ></textarea>
+
+          <small class="field-error"></small>
+        </label>
+
+
+        <button
+          class="primary-btn modal-submit"
+          type="submit"
+        >
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== TRANSACTION MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="transactionModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="transactionTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close transaction details"
+      >
+        &times;
+      </button>
+
+      <h2 id="transactionTitle">
+        Transaction Details
+      </h2>
+
+      <div
+        id="transactionDetails"
+        class="detail-list"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== REFUND MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="refundModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="refundTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close refund confirmation"
+      >
+        &times;
+      </button>
+
+      <h2 id="refundTitle">
+        Confirm Refund
+      </h2>
+
+      <p class="modal-intro">
+        Are you sure you want to refund this payment?
+      </p>
+
+      <div
+        id="refundDetails"
+        class="detail-list"
+      ></div>
+
+
+      <div class="modal-actions">
+
+        <button
+          class="secondary-action"
+          type="button"
+          data-close-modal
+        >
+          Cancel
+        </button>
+
+        <button
+          class="primary-btn"
+          id="confirmRefund"
+          type="button"
+        >
+          Confirm Refund
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== INVOICE MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="invoiceModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="invoiceTitle"
+    hidden
+  >
+
+    <div class="modal-card invoice-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close invoice"
+      >
+        &times;
+      </button>
+
+      <div id="invoicePreview"></div>
+
+      <button
+        class="primary-btn modal-submit"
+        id="printInvoice"
+        type="button"
+      >
+        Print / Save Invoice
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== CUSTOMER MODAL ==================== -->
+  <div
+    class="modal-overlay"
+    id="customerModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="customerTitle"
+    hidden
+  >
+
+    <div class="modal-card">
+
+      <button
+        class="modal-close"
+        type="button"
+        aria-label="Close customer details"
+      >
+        &times;
+      </button>
+
+      <h2 id="customerTitle">
+        Customer Details
+      </h2>
+
+      <div
+        id="customerDetails"
+        class="detail-list"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
