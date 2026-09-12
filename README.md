@@ -1,10 +1,10 @@
-# PayFlow — Payment Gateway Website
+# Razorpay — Payment Gateway Website
 
 ## QSkill Internship — Slab 2 Intermediate Project
 
 ### Project Title
 
-PayFlow — Payment Gateway Website
+Razorpay — Payment Gateway Website
 
 ### Domain
 
@@ -19,7 +19,7 @@ Web Development
 
 ## Project Description
 
-PayFlow is a responsive frontend payment gateway website developed using HTML, CSS and JavaScript.
+Razorpay is a responsive frontend payment gateway website developed using HTML, CSS and JavaScript.
 
 The project was created as part of the **QSkill Internship Slab 2 Intermediate Web Development Task**, which required developing a frontend implementation inspired by a modern payment platform website.
 
@@ -126,4 +126,4 @@ B.Tech Computer Science & Engineering
 
 Completed — QSkill Internship Slab 2
 
-© 2026 PayFlow — Educational Project
+© 2026 Razorpay — Educational Project
